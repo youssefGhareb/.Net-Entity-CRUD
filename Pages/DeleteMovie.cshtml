@@ -1,0 +1,12 @@
+﻿@page "{id:int}"
+@model razorPages.Pages.DeleteMovieModel
+@{
+}
+
+<h1>Delete Movie</h1>
+<div>
+    <p>Are you sure you want to delete @Model.Movie?.Title ?</p>
+    <form method="post">
+        <input type="submit" class="btn btn-danger" value="Delete" />
+    </form>
+</div>

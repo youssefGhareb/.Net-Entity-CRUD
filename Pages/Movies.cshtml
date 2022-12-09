@@ -1,0 +1,33 @@
+﻿@page
+@model razorPages.Pages.MoviesModel
+@{
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Movie in Model.Movies)
+        {
+            <tr>
+                <th scope="row">@Movie.Id</th>
+                <td>@Movie.Title</td>
+                <td>@Movie.Rate</td>
+                <td>
+                    <a href="/Movie/@Movie.Id" class="btn btn-primary">More Info</a>
+                    <a href="/DeleteMovie/@Movie.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div style="position:fixed; bottom: 70px; right:30px">
+    <a class="btn btn-secondary" href="/AddMovie">Add New Movie</a>
+</div>

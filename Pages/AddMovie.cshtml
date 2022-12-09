@@ -1,0 +1,23 @@
+﻿@page
+@model razorPages.Pages.AddMovieModel
+@{
+}
+
+<form method="post">
+    <div class="mb-3">
+        <label for="title" class="form-label">Movie Title</label>
+        <input type="text" class="form-control" id="title" name="Title">
+        <span asp-validation-for="@Model.Title"></span>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Movie Description</label>
+        <textarea class="form-control" id="description" rows="3" name="Description"></textarea>
+        <span asp-validation-for="@Model.Description"></span>
+    </div>
+    <div class="mb-3">
+        <label for="rate" class="form-label">Movie Rate</label>
+        <input type="number" class="form-control" id="rate" name="Rate">
+        <span asp-validation-for="@Model.Rate"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
